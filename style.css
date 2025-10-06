@@ -5,6 +5,7 @@
     --output-bg: #ffffff;
     --input-bg: #ffffff;
     --border-color: #ccc;
+    --code-bg: #f6f8fa;
 }
 
 body.dark-mode {
@@ -14,6 +15,7 @@ body.dark-mode {
     --output-bg: #242526;
     --input-bg: #3a3b3c;
     --border-color: #4b4c4e;
+    --code-bg: #3a3b3c;
 }
 
 /* navbar styling */
@@ -148,4 +150,22 @@ body {
     background-color: var(--output-bg);
     color: var(--text-color);
     padding: 16px;
+}
+
+#output-field h1,
+#output-field h2 {
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: .3em;
+}
+
+#output-field code {
+    background-color: var(--code-bg);
+    padding: .2em .4em;
+    border-radius: 3px;
+}
+
+#output-field pre {
+    background-color: var(--code-bg);
+    padding: 16px;
+    border-radius: 3px;
 }
