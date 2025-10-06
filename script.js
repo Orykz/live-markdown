@@ -7,6 +7,16 @@ modeSwitch.addEventListener("change", () => {
     document.body.classList.toggle("dark-mode");
 });
 
+function debounce(func, wait) {
+    let timeoutId = null;
+    return (...args) => {
+        window.clearTimeout(timeoutId);
+        timeoutId = window.setTimeout(() => {
+            func(...args);
+        }, wait);
+    }
+}
+
 function updateView() {
     const markdownText = markdownInput.value;
     const parsedHTML = marked.parse(markdownText);
@@ -15,7 +25,8 @@ function updateView() {
     markdownOutput.innerHTML = sanitizedHTML;
 }
 
-markdownInput.addEventListener("input", updateView);
+const inputChange = debounce(updateView, 300) // 300ms delay
+markdownInput.addEventListener("input", inputChange);
 
 markdownInput.value = `# Markdown Text Viewer
 1. Type on the left.
