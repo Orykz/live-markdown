@@ -16,4 +16,13 @@ function updateView() {
 }
 
 markdownInput.addEventListener("input", updateView);
+
+markdownInput.value = `# Markdown Text Viewer
+1. Type on the left.
+2. See the results on the right.
+3. You can toggle light or dark mode on the top right of navbar.
+\`\`\`
+console.log("Alright, good luck!");
+\`\`\`
+`
 updateView();
