@@ -1,0 +1,69 @@
+.navbar {
+    background-color: #f0f2f5;
+    padding: 1rem 1rem;
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #000;
+}
+
+.navbar-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-links a {
+    color: #000;
+}
+
+
+body {
+    margin: 0;
+    background-color: #f0f2f5;
+    color: #1c1e21;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    flex: 1;
+    flex-wrap: nowrap;
+    height: 100vh;
+    padding: 1em;
+    gap: 1em;
+    box-sizing: border-box;
+}
+
+.panel {
+    flex: 1;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+
+}
+
+#input-field {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    box-sizing: border-box;
+    border: none;
+    resize: none;
+}
